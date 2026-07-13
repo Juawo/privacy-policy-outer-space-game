@@ -3,49 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Outer Space</title>
+    <title>Privacy Policy | Política de Privacidade - Outer Space</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #111; }
-        h2 { color: #2c3e50; margin-top: 30px; }
-        footer { margin-top: 50px; font-size: 0.8em; color: #666; }
+        /* Variáveis de estilo baseadas no Minimal Mistakes (Skin Contrast/Light-Dark) */
+        :root {
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-color: #2c3e50;
+            --border-color: #e2e8f0;
+            --button-bg: #3b82f6;
+            --button-hover: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout centralizado do documento */
+        .document-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* Cabeçalho da página */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .studio-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--button-bg);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .update-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Botão seletor de idioma Minimalista */
+        .btn-lang {
+            background-color: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-lang:hover {
+            border-color: var(--button-bg);
+            color: var(--button-bg);
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+
+        /* Tipografia de Seções */
+        h2 {
+            color: var(--accent-color);
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        li strong {
+            color: #0f172a;
+        }
+
+        /* Bloco de Contato (estilo callout do Minimal Mistakes) */
+        .callout-box {
+            background-color: var(--bg-color);
+            border-left: 4px solid var(--button-bg);
+            padding: 20px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 32px;
+        }
+
+        .callout-box p {
+            margin-bottom: 8px;
+        }
+
+        .callout-box a {
+            color: var(--button-bg);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .callout-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 48px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--button-bg);
+        }
+
+        /* Classes utilitárias de tradução */
+        .lang-en { display: none; }
+
+        /* Ajustes responsivos para telemóveis/celulares */
+        @media (max-width: 640px) {
+            body { padding: 16px 8px; }
+            .document-wrapper { padding: 24px; }
+            .page-header { flex-direction: column-reverse; gap: 16px; align-items: flex-end; }
+            .header-text-group { width: 100%; }
+            h1 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Política de Privacidade do jogo OuterSpace do estúdio FunAxys</h1>
-    <p><strong>Última atualização:</strong> Julho de 2026</p>
-    <p>Esta Política de Privacidade descreve como o jogo <strong>Outer Space</strong>, desenvolvido pela equipe <strong>Funaxys</strong>, coleta, usa e compartilha suas informações quando você joga o nosso aplicativo móvel.</p>
+    <div class="document-wrapper">
+        
+        <header class="page-header">
+            <div class="header-text-group">
+                <div class="studio-tag">FunAxys Studio</div>
+                
+                <h1 class="lang-pt">Política de Privacidade</h1>
+                <h1 class="lang-en">Privacy Policy</h1>
+                
+                <div class="update-date">
+                    <span class="lang-pt"><strong>Última atualização:</strong> Julho de 2026</span>
+                    <span class="lang-en"><strong>Last updated:</strong> July 2026</span>
+                </div>
+            </div>
+            
+            <button class="btn-lang" onclick="toggleLanguage()" id="langBtn">
+                <i class="fa-solid fa-globe"></i> <span>EN</span>
+            </button>
+        </header>
 
-    <h2>1. Informações Coletadas</h2>
-    <p>Para o funcionamento das mecânicas sociais e competitivas do jogo, nós coletamos e armazenamos as seguintes informações fornecidas diretamente por você ao registrar o seu perfil:</p>
-    <ul>
-        <li><strong>Apelido (Nickname):</strong> Utilizado estritamente para identificação no placar de líderes (Leaderboard).</li>
-        <li><strong>Pontuação Máxima (High-Score):</strong> Utilizada para calcular o seu ranqueamento global.</li>
-        <li><strong>País (Inserido manualmente):</strong> Informação de texto opcional digitada pelo usuário para fins estéticos no ranking.</li>
-        <li><strong>Idade:</strong> Informação coletada estritamente para parâmetros acadêmicos de desenvolvimento, não sendo utilizada para fins comerciais ou compartilhamento.</li>
-    </ul>
+        <main id="content-pt" class="lang-pt">
+            <p>Esta Política de Privacidade descreve como o jogo <strong>Outer Space</strong>, desenvolvido pela equipe <strong>FunAxys</strong>, coleta, usa e compartilha suas informações quando você joga o nosso aplicativo móvel.</p>
 
-    <h2>2. Uso dos Dados</h2>
-    <p>Os dados coletados são hospedados de forma segura em nossos servidores de banco de dados e são utilizados única e exclusivamente para:</p>
-    <ul>
-        <li>Exibir o seu apelido e pontuação no painel de líderes dentro do jogo.</li>
-        <li>Garantir a integridade das competições e torneios realizados.</li>
-    </ul>
+            <h2>1. Informações Coletadas</h2>
+            <p>Para o funcionamento das mecânicas sociais e competitivas do jogo, nós coletamos e armazenamos as seguintes informações fornecidas diretamente por você ao registrar o seu perfil:</p>
+            <ul>
+                <li><strong>Apelido (Nickname):</strong> Utilizado estritamente para identificação no placar de líderes (Leaderboard).</li>
+                <li><strong>Pontuação Máxima (High-Score):</strong> Utilizada para calcular o seu ranqueamento global.</li>
+                <li><strong>País (Inserido manualmente):</strong> Informação de texto opcional digitada pelo usuário para fins estéticos no ranking.</li>
+                <li><strong>Idade:</strong> Informação coletada estritamente para parâmetros acadêmicos de desenvolvimento, não sendo utilizada para fins comerciais ou compartilhamento.</li>
+            </ul>
 
-    <h2>3. Serviços de Terceiros e Anúncios</h2>
-    <p>Este aplicativo utiliza serviços de publicidade de terceiros para fins de monetização. Essas redes de anúncios podem coletar identificadores de publicidade do seu dispositivo (como o Google Advertising ID) para exibir anúncios personalizados. Atualmente, o jogo planeja integrar serviços compatíveis com as diretrizes do Google Play.</p>
+            <h2>2. Uso dos Dados</h2>
+            <p>Os dados coletados são hospedados de forma segura em nossos servidores de banco de dados e são utilizados única e exclusivamente para:</p>
+            <ul>
+                <li>Exibir o seu apelido e pontuação no painel de líderes dentro do jogo.</li>
+                <li>Garantir a integridade das competições e torneios realizados.</li>
+            </ul>
 
-    <h2>4. Retenção e Exclusão de Dados</h2>
-    <p>Nós manteremos seus dados salvos enquanto o jogo estiver ativo. Se a qualquer momento você desejar que o seu apelido e histórico de pontuação sejam removidos permanentemente de nossos servidores, basta entrar em contato conosco pelo e-mail de suporte abaixo.</p>
+            <h2>3. Serviços de Terceiros e Anúncios</h2>
+            <p>Este aplicativo utiliza serviços de publicidade de terceiros para fins de monetização. Essas redes de anúncios podem coletar identificadores de publicidade do seu dispositivo (como o Google Advertising ID) para exibir anúncios personalizados. Atualmente, o jogo planeja integrar serviços compatíveis com as diretrizes do Google Play.</p>
 
-    <h2>5. Contato</h2>
-    <p>Se você tiver alguma dúvida sobre esta política de privacidade, entre em contato com a equipe Funaxys através do e-mail do Gmail criado para a equipe.</p>
-    <p><b>Email para contato : </b>funaxys.studio@gmail.com</p>
+            <h2>4. Retenção e Exclusão de Dados</h2>
+            <p>Nós manteremos seus dados salvos enquanto o jogo estiver ativo. Se a qualquer momento você desejar que o seu apelido e histórico de pontuação sejam removidos permanentemente de nossos servidores, basta entrar em contato conosco pelo e-mail de suporte abaixo.</p>
 
-    <footer>
-        <p>&copy; 2026 Funaxys. Todos os direitos reservados. | funaxys.studio@gmail.com </p>
-    </footer>
+            <h2>5. Contato</h2>
+            <div class="callout-box">
+                <p>Se tiver alguma dúvida sobre esta política de privacidade, entre em contato com a equipe FunAxys através do nosso canal oficial:</p>
+                <p><strong><i class="fa-regular fa-envelope"></i> Email para contato:</strong> <a href="mailto:funaxys.studio@gmail.com">funaxys.studio@gmail.com</a></p>
+            </div>
+        </main>
 
+        <main id="content-en" class="lang-en">
+            <p>This Privacy Policy describes how the game <strong>Outer Space</strong>, developed by the <strong>FunAxys</strong> team, collects, uses, and shares your information when you play our mobile application.</p>
+
+            <h2>1. Collected Information</h2>
+            <p>For the proper functioning of the game's social and competitive mechanics, we collect and store the following information provided directly by you when registering your profile:</p>
+            <ul>
+                <li><strong>Nickname:</strong> Used strictly for identification on the game's global leaderboard.</li>
+                <li><strong>High-Score:</strong> Used to calculate and update your global ranking.</li>
+                <li><strong>Country (Manually entered):</strong> Optional text input entered by the user for aesthetic and regional customization on the leaderboard.</li>
+                <li><strong>Age:</strong> Information collected strictly for academic development and research parameters, and it is not used for commercial profiling or shared with third parties.</li>
+            </ul>
+
+            <h2>2. Use of Data</h2>
+            <p>The collected data is securely hosted on our database servers and is used solely and exclusively to:</p>
+            <ul>
+                <li>Display your nickname and top score on the in-game global leaderboard.</li>
+                <li>Ensure the integrity and fairness of any competitions or tournaments.</li>
+            </ul>
+
+            <h2>3. Third-Party Services and Advertisements</h2>
+            <p>This application utilizes third-party advertising services for monetization. These ad networks may collect advertising identifiers from your mobile device (such as the Google Advertising ID) to deliver personalized ads. Currently, the game plans to integrate services that are fully compliant with Google Play guidelines.</p>
+
+            <h2>4. Data Retention and Deletion</h2>
+            <p>We will retain your data for as long as the game is actively running. If at any time you wish to have your nickname and score history permanently removed from our servers, simply contact us via the support email listed below.</p>
+
+            <h2>5. Contact</h2>
+            <div class="callout-box">
+                <p>If you have any questions regarding this privacy policy, please contact the FunAxys team through our official channel:</p>
+                <p><strong><i class="fa-regular fa-envelope"></i> Support Email:</strong> <a href="mailto:funaxys.studio@gmail.com">funaxys.studio@gmail.com</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                &copy; 2026 FunAxys. 
+                <span class="lang-pt">Todos os direitos reservados.</span>
+                <span class="lang-en">All rights reserved.</span>
+            </div>
+            <div>
+                <a href="mailto:funaxys.studio@gmail.com"><i class="fa-solid fa-envelope"></i> funaxys.studio@gmail.com</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const btn = document.getElementById('langBtn');
+            const elementsPt = document.querySelectorAll('.lang-pt');
+            const elementsEn = document.querySelectorAll('.lang-en');
+            const htmlTag = document.documentElement;
+
+            if (htmlTag.lang === 'pt-BR') {
+                // Alternar para Inglês
+                htmlTag.lang = 'en';
+                elementsPt.forEach(el => el.style.display = 'none');
+                elementsEn.forEach(el => el.style.display = 'block');
+                btn.querySelector('span').textContent = 'PT';
+            } else {
+                // Alternar para Português
+                htmlTag.lang = 'pt-BR';
+                elementsPt.forEach(el => el.style.display = 'block');
+                elementsEn.forEach(el => el.style.display = 'none');
+                btn.querySelector('span').textContent = 'EN';
+            }
+        }
+    </script>
 </body>
 </html>
